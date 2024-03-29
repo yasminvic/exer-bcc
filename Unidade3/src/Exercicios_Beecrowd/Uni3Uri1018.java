@@ -12,14 +12,14 @@ public class Uni3Uri1018 {
 		int num = scanner.nextInt();
 		
 		String resultado = num + "\n";
-		
-		for(int i = 0; i<notas.length; i++) {
-			int qtdNota = num / notas[i];
-			num -= notas[i] * qtdNota;
-			
-			resultado += qtdNota + " nota(s) de R$ "+ notas[i] + ",00\n";
-			
-		}
+
+        for (int nota : notas) {
+            int qtdNota = num / nota;
+            num -= nota * qtdNota;
+
+            resultado += qtdNota + " nota(s) de R$ " + nota + ",00\n";
+
+        }
 		
 		System.out.print(resultado);
 	}
